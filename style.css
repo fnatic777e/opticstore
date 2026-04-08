@@ -1,0 +1,103 @@
+/* БАЗОВЫЕ СТИЛИ */
+body {
+  margin: 0;
+  font-family: -apple-system, sans-serif;
+  background: #fafafa;
+  color: #111;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  height: 55px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.logo { font-weight: 600; }
+.cart-btn {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+.menu button {
+  border: none;
+  background: #eee;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.menu .active { background: black; color: white; }
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card:active { transform: scale(0.97); }
+.card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+.card h4 { margin: 8px; font-size: 14px; }
+.card p { margin: 0 8px 10px; font-weight: bold; }
+
+/* MODAL */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); }
+.modal-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+}
+
+/* CLOSE */
+.close { float: right; cursor: pointer; }
+
+/* CAROUSEL */
+.carousel { position: relative; }
+.carousel img { width: 100%; border-radius: 12px; }
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.carousel button:first-child { left: 5px; }
+.carousel button:last-child { right: 5px; }
+
+/* MODAL BUTTONS */
+.modal-content button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.modal-content button:first-of-type { background: #eee; }
+.modal-content button:last-of-type { background: black; color: white; }
